@@ -1,0 +1,45 @@
+.accordeon {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    font-weight: 700;
+    font-size: $text-16;
+    line-height: 150%;
+    color: #E4E4E4;
+    text-align: left;
+    margin: 5px 0 5px 0;
+    &::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        height: 1px;
+        background-color: #1F1F1F;
+    }
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.questions .accordeon::after {
+    content: url(https://www.pdau.edu.ua/sites/default/files/acc-arrow.png);
+    height: 14px;
+    width: 26px;
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.questions .accordeon.active::after {
+    transform: rotate(180deg);
+    top: 50%;
+}

@@ -1,10 +1,11 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // Reset
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: #232323;
     box-sizing: border-box;
     border: none;
     background: transparent;
@@ -32,17 +33,30 @@ $text-40: 2.5rem;
 $text-48: 3rem;
 $text-64: 4rem;
 // Colors
-$mainColor:#DD133B;
+$mainColor:#CBFD00;
 $secondaryColor: #232323;
 // Classes
+:root {
+    --duration: 60s;
+    --scroll-start: 0;
+    --scroll-end: -100%;
+}
+
 .container {
-    width: min(100% - 2rem, 1140px);
+    width: min(100% - 2rem, 352px);
     margin: 0 auto;
 }
 
 body {
-    font-family: "Proba Pro", Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.small-text {
+    font-weight: 400;
+    font-size: $text-20;
+    line-height: 120%;
+    color: #000000;
 }

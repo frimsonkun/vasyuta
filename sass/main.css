@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
-  color: #232323;
   box-sizing: border-box;
   border: none;
   background: transparent;
@@ -14,14 +14,324 @@
   outline: none;
 }
 
+:root {
+  --duration: 60s;
+  --scroll-start: 0;
+  --scroll-end: -100%;
+}
+
 .container {
-  width: min(100% - 2rem, 1140px);
+  width: min(100% - 2rem, 352px);
   margin: 0 auto;
 }
 
 body {
-  font-family: "Proba Pro", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.small-text {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 120%;
+  color: #000000;
+}
+
+.marquee-group {
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: #CBFD00;
+}
+
+.marquee {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  min-width: 100%;
+  animation: scrollx var(--duration) linear infinite;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 120%;
+  color: #000000;
+  padding: 5px 0;
+}
+
+.marquee-group .marquee-reverse {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+@keyframes scrollx {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+.accordeon {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #E4E4E4;
+  text-align: left;
+  margin: 5px 0 5px 0;
+}
+.accordeon::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  height: 1px;
+  background-color: #1F1F1F;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.questions .accordeon::after {
+  content: url(https://www.pdau.edu.ua/sites/default/files/acc-arrow.png);
+  height: 14px;
+  width: 26px;
+  display: inline-block;
+  position: absolute;
+  right: 1em;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.questions .accordeon.active::after {
+  transform: rotate(180deg);
+  top: 50%;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 16.61%, #000000 90%), url(../../assets/img/hero.jpg), #D9D9D9;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero .container {
+  padding: 20px 0 0 0;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-text h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 104%;
+  text-transform: uppercase;
+  color: #CBFD00;
+}
+.hero-text h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #E4E4E4;
+  margin: 13px 0 25px;
+}
+
+.grey-btn {
+  display: block;
+  margin-bottom: 18px;
+  background: #161616;
+  padding: 6px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: center;
+  color: #E4E4E4;
+}
+.grey-btn span {
+  color: #E4E4E4;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.yellow-btn {
+  background: #CBFD00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 125%;
+  color: #000000;
+}
+
+.fa-arrow-left {
+  color: #000000;
+  transform: rotate(135deg);
+}
+
+.hero-image {
+  display: none;
+}
+
+.prices {
+  position: relative;
+  padding: 100px 0 50px;
+}
+.prices .marquee-group {
+  z-index: 0;
+  position: absolute;
+  background: transparent;
+  gap: 10px;
+}
+.prices .marquee-group .marquee {
+  animation-duration: 200s;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #E7E7E7;
+}
+.prices .marquee-group:nth-child(1) {
+  top: 0;
+}
+.prices .marquee-group:nth-child(2) {
+  top: 60px;
+}
+.prices .marquee-group:nth-child(3) {
+  top: 120px;
+}
+.prices .container {
+  position: relative;
+  z-index: 1;
+}
+.date {
+  margin: 0 0 40px 0;
+}
+.date h3 {
+  font-weight: 800;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+.date-num {
+  position: relative;
+}
+.date-num p {
+  position: absolute;
+  top: 82%;
+  left: -2%;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transform: rotate(-4.19deg);
+  background: #161616;
+  padding: 12px 14px;
+}
+
+.pay-delay {
+  display: none;
+}
+
+.prices-container {
+  overflow: auto;
+  display: flex;
+  gap: 17px;
+  padding: 0 0 20px;
+  margin: 75px 0 40px 0;
+}
+
+.price-card {
+  background: #000000;
+  min-width: 290px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.price-card:nth-child(2) .price-name {
+  position: relative;
+  left: -3%;
+}
+
+.price-name {
+  text-align: center;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 90%;
+  color: #CBFD00;
+  text-shadow: 0px 4px 84px rgba(203, 253, 0, 0.32);
+  transform: rotate(-6.67deg);
+  margin-bottom: 20px;
+}
+
+.xs-text {
+  position: relative;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 135%;
+  color: #E4E4E4;
+  margin: 10px 0;
+}
+.xs-text::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  height: 1px;
+  background-color: #1F1F1F;
+}
+.xs-text:last-child::after {
+  display: none;
+}
+
+.old-new-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+
+.old-price {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 156%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: relative;
+}
+.old-price::after {
+  content: "";
+  width: 110%;
+  height: 3px;
+  background-color: #CBFD00;
+  position: absolute;
+  left: -5%;
+  top: 50%;
+}
+
+.new-price {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
