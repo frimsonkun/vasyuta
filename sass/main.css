@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #232323;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  width: min(100% - 2rem, 1140px);
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Proba Pro", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */

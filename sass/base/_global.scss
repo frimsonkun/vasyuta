@@ -1,0 +1,48 @@
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #232323;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+//font variables
+$text-12: .750rem;
+$text-14: .875rem;
+$text-16: 1rem;
+$text-18: 1.125rem;
+$text-20: 1.25rem;
+$text-22: 1.375rem;
+$text-24: 1.5rem;
+$text-26: 1.625rem;
+$text-28: 1.750rem;
+$text-30: 1.875rem;
+$text-32: 2rem;
+$text-36: 2.25rem;
+$text-40: 2.5rem;
+$text-48: 3rem;
+$text-64: 4rem;
+// Colors
+$mainColor:#DD133B;
+$secondaryColor: #232323;
+// Classes
+.container {
+    width: min(100% - 2rem, 1140px);
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Proba Pro", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
