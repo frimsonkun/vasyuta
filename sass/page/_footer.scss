@@ -1,0 +1,49 @@
+.footer {
+    background: $mainColor;
+    & .container {
+        padding: 20px 0 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        &>.footer-links {
+            display: flex;
+        }
+    }
+}
+
+.footer-text {
+    & .heading {
+        margin: 0 0 20px 0;
+    }
+}
+
+.footer-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    & .yellow-btn {
+        border: 2px solid black;
+    }
+    & .black-btn {
+        padding: 15px 10px;
+        font-weight: 700;
+        font-size: $text-28;
+        line-height: 120%;
+        text-align: center;
+        & .fa-arrow-left {
+            color: white;
+            scale: 1.2;
+            font-weight: 700;
+        }
+    }
+}
+
+.fa-instagram {}
+
+.footer-images {
+    margin: 20px 0;
+    & img {
+        max-width: 100%;
+        height: auto;
+    }
+}

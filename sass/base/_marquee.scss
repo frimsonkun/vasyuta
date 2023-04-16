@@ -5,6 +5,13 @@
     background-color: $mainColor;
 }
 
+main>,
+.marquee-group {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
 .marquee {
     flex-shrink: 0;
     display: flex;

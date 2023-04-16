@@ -1,0 +1,98 @@
+.feedback {
+    margin: 0 0 40px 0;
+    & .container {
+        & .heading {
+            position: relative;
+            margin: 0 0 40px 0;
+            &::after {
+                content: url(../../assets/img/feedback.png);
+                position: absolute;
+                z-index: -1;
+                right: -20%;
+                top: -120px;
+                scale: .4;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.slider_item {
+    width: 80vw;
+    min-width: 300px;
+    height: 80vh;
+}
+
+.slider-picture {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/* Слайдер */
+
+.slick-slider {
+    display: flex;
+    gap: 20px;
+    min-width: 0;
+    max-width: 100%;
+    position: relative;
+}
+
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+    overflow: hidden;
+}
+
+
+/* Лента слайдов */
+
+.slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Стрелка */
+
+.slick-arrow {
+    font-size: 0;
+    width: 90px;
+    height: 90px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-position: center;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+    background-size: contain;
+    border-radius: 50%;
+    transition: all .1s ease;
+    &:hover {
+        box-shadow: 0 0 15px 0 $mainColor;
+    }
+}
+
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+    background-image: url(../../assets/img/arrow-prev.png);
+    left: 400px;
+    top: -125px;
+}
+
+
+/* Стрелка вправо */
+
+.slick-arrow.slick-next {
+    background-image: url(../../assets/img/arrow-next.png);
+    left: 550px;
+    top: -125px;
+}

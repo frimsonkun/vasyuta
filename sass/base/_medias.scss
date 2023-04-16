@@ -1,0 +1,160 @@
+@media screen and (min-width: 430px) {
+    .footer-images {
+        position: static;
+    }
+    .footer-links .yellow-btn,
+    .footer-links .black-btn {
+        padding: 15px 40px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .hero-text h2 {
+        font-size: $text-18;
+    }
+    .date-num p {
+        left: 50%;
+        transform: translateX(-50%) rotate(-4.19deg);
+        width: 350px;
+    }
+    .price-card {
+        min-width: 350px;
+    }
+    .service-unit {
+        min-width: 40vw;
+    }
+    .matrix .container .heading::after {
+        left: 50%;
+        top: -70px;
+    }
+    .slider_item {
+        width: 40vw;
+    }
+    .feedback .container .heading::after {
+        left: 55%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-text {
+        & .grey-btn,
+        .yellow-btn {
+            width: 330px;
+            margin: 10px auto;
+        }
+    }
+    .black-btn {
+        display: block;
+        margin: 0 auto 15px auto;
+        width: fit-content;
+    }
+    .matrix {
+        margin: 0 0 80px 0;
+    }
+    .slider_item {
+        min-width: 280px;
+        width: 280px;
+        height: 603px;
+    }
+    .footer-images {
+        text-align: center;
+        & img {
+            max-width: 90%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        background: #000;
+        & .container {
+            justify-content: center;
+        }
+    }
+    .hero-text {
+        max-width: 55%;
+    }
+    .hero-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 45%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .service-unit {
+        min-width: 30vw;
+    }
+    .services .container .pay-delay {
+        display: flex;
+        gap: 20px;
+        & .black-btn {
+            flex-shrink: 0;
+        }
+    }
+    .matrix {
+        position: relative;
+        z-index: 0;
+        padding: 50px 0;
+        & .container {
+            flex-direction: row;
+            & .heading {
+                min-width: 50%;
+                z-index: 1;
+                &::after {
+                    left: 7%;
+                    top: -70px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .feedback .container .heading {
+        margin-left: auto;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .services .container .pay-delay {
+        display: none;
+    }
+    .date {
+        display: flex;
+        justify-content: space-between;
+        & .date-num {
+            margin: 0 0 0 10px;
+            & p {
+                top: 50%;
+                left: 59%;
+            }
+        }
+        & .pay-delay {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 0;
+            width: 340px;
+            & .black-btn {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    .definition {
+        flex-direction: row;
+    }
+    .prices-container {
+        margin: 30px 0 40px 0;
+    }
+    .price-card {
+        padding: 20px;
+    }
+    .services-container {
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+    .service-unit {
+        min-width: 20%;
+        width: 24%;
+    }
+}

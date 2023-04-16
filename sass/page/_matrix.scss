@@ -1,0 +1,36 @@
+.matrix {
+    margin: 0 0 40px 0;
+    background-color: #F9F9F9;
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & .heading {
+            position: relative;
+            &::after {
+                content: url(../../assets/img/pluses.png);
+                position: absolute;
+                z-index: -1;
+                left: -35px;
+                top: -30px;
+                scale: .4;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.definition {
+    font-size: $text-20;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & p {
+        color: #5C5C5C;
+        font-size: $text-16;
+        & span {
+            margin: 10px 0 0 0;
+            display: block;
+        }
+    }
+}
