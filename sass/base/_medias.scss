@@ -65,6 +65,20 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .heading {
+        font-size: 96px;
+        line-height: 90px;
+        /* or 94% */
+    }
+    .services .container .heading {
+        width: 90%;
+        margin: 0 0 80px 0;
+        margin-left: auto;
+        &+img {
+            scale: 1.2;
+            right: 76%;
+        }
+    }
     .hero {
         background: #000;
         & .container {
@@ -82,6 +96,14 @@
         max-width: 45%;
         height: 100%;
         object-fit: cover;
+    }
+    .date h3 {
+        font-size: 200px;
+    }
+    .date .date-num p {
+        top: 80%;
+        left: 55%;
+        scale: 1.1;
     }
     .service-unit {
         min-width: 30vw;
@@ -106,17 +128,52 @@
                     left: 7%;
                     top: -70px;
                     z-index: -1;
+                    scale: 1;
                 }
             }
         }
     }
     .feedback .container .heading {
         margin-left: auto;
-        width: 400px;
+        width: 600px;
+        &::after {
+            scale: 1;
+            top: -50px;
+        }
+    }
+    .footer .container {
+        flex-direction: row;
+        padding: 150px 0 50px;
+        & .footer-text {
+            max-width: 40%;
+            & .footer-links {
+                margin: 50px 0 0 0;
+                display: flex;
+                align-items: flex-start;
+                & a {
+                    margin: 0;
+                    min-width: 350px;
+                    max-width: 400px;
+                }
+            }
+        }
+        & .footer-images {
+            max-width: 100%;
+        }
+    }
+    .footer .container>.footer-links {
+        display: none;
     }
 }
 
 @media screen and (min-width: 1140px) {
+    .hero-text h1 {
+        font-size: 96px;
+    }
+    .hero-text .grey-btn,
+    .hero-text .yellow-btn {
+        margin: 10px 0;
+    }
     .services .container .pay-delay {
         display: none;
     }
@@ -125,10 +182,6 @@
         justify-content: space-between;
         & .date-num {
             margin: 0 0 0 10px;
-            & p {
-                top: 50%;
-                left: 59%;
-            }
         }
         & .pay-delay {
             display: flex;
@@ -144,7 +197,7 @@
         flex-direction: row;
     }
     .prices-container {
-        margin: 30px 0 40px 0;
+        margin: 90px 0 40px 0;
     }
     .price-card {
         padding: 20px;

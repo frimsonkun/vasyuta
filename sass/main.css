@@ -133,7 +133,7 @@ main {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 16.61%, #000000 90%), url(../../assets/img/hero.jpg), #000;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 16.61%, #000000 90%), url(../../assets/img/hero.jpg), #CBFD00;
   background-position: center 0;
   background-repeat: no-repeat;
   position: relative;
@@ -693,6 +693,20 @@ p.service_smaller {
   }
 }
 @media screen and (min-width: 1024px) {
+  .heading {
+    font-size: 96px;
+    line-height: 90px;
+    /* or 94% */
+  }
+  .services .container .heading {
+    width: 90%;
+    margin: 0 0 80px 0;
+    margin-left: auto;
+  }
+  .services .container .heading + img {
+    scale: 1.2;
+    right: 76%;
+  }
   .hero {
     background: #000;
   }
@@ -711,6 +725,14 @@ p.service_smaller {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .date h3 {
+    font-size: 200px;
+  }
+  .date .date-num p {
+    top: 80%;
+    left: 55%;
+    scale: 1.1;
   }
   .service-unit {
     min-width: 30vw;
@@ -738,13 +760,48 @@ p.service_smaller {
     left: 7%;
     top: -70px;
     z-index: -1;
+    scale: 1;
   }
   .feedback .container .heading {
     margin-left: auto;
-    width: 400px;
+    width: 600px;
+  }
+  .feedback .container .heading::after {
+    scale: 1;
+    top: -50px;
+  }
+  .footer .container {
+    flex-direction: row;
+    padding: 150px 0 50px;
+  }
+  .footer .container .footer-text {
+    max-width: 40%;
+  }
+  .footer .container .footer-text .footer-links {
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .footer .container .footer-text .footer-links a {
+    margin: 0;
+    min-width: 350px;
+    max-width: 400px;
+  }
+  .footer .container .footer-images {
+    max-width: 100%;
+  }
+  .footer .container > .footer-links {
+    display: none;
   }
 }
 @media screen and (min-width: 1140px) {
+  .hero-text h1 {
+    font-size: 96px;
+  }
+  .hero-text .grey-btn,
+  .hero-text .yellow-btn {
+    margin: 10px 0;
+  }
   .services .container .pay-delay {
     display: none;
   }
@@ -754,10 +811,6 @@ p.service_smaller {
   }
   .date .date-num {
     margin: 0 0 0 10px;
-  }
-  .date .date-num p {
-    top: 50%;
-    left: 59%;
   }
   .date .pay-delay {
     display: flex;
@@ -772,7 +825,7 @@ p.service_smaller {
     flex-direction: row;
   }
   .prices-container {
-    margin: 30px 0 40px 0;
+    margin: 90px 0 40px 0;
   }
   .price-card {
     padding: 20px;
